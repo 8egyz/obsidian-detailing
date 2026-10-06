@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Онлайн-запись в Obsidian Detailing: выберите класс авто, пакет и время, цена посчитается сразу.">
+  <title>Obsidian Detailing | Запись</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top site-nav" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">OBSIDIAN<span>.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainMenu" aria-controls="mainMenu"
+              aria-expanded="false" aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Услуги и цены</a></li>
+          <li class="nav-item"><a class="nav-link" href="works.html">Работы</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+          <li class="nav-item ms-lg-3"><a class="btn btn-accent btn-sm active" href="booking.html">Записаться</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-head">
+      <div class="container">
+        <p class="hero-tag fade-up">Онлайн-запись</p>
+        <h1 class="fade-up d2">Запишитесь<br>за минуту.</h1>
+        <p class="fade-up d3">Выберите класс автомобиля и пакет, и цена посчитается сразу. Мы перезвоним в течение часа, чтобы подтвердить время.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+
+          <div class="col-12 col-lg-7">
+            <form id="bookingForm" class="booking-form" data-bs-theme="dark">
+
+              <fieldset>
+                <legend>1. Ваши данные</legend>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="name" class="form-label">Имя</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Ерлан" required minlength="2" autocomplete="given-name">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="phone" class="form-label">Телефон</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7 700 000 00 00" required pattern="[0-9+()\s\-]{10,18}" autocomplete="tel">
+                  </div>
+                  <div class="col-12">
+                    <label for="car" class="form-label">Марка и модель автомобиля</label>
+                    <input type="text" class="form-control" id="car" name="car" placeholder="Audi A6, 2021" required>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>2. Класс автомобиля</legend>
+                <div class="class-grid">
+                  <label class="class-option">
+                    <input type="radio" name="carClass" value="sedan" checked>
+                    <span><b>Седан</b><small>Camry, A6, E-Class</small></span>
+                  </label>
+                  <label class="class-option">
+                    <input type="radio" name="carClass" value="crossover">
+                    <span><b>Кроссовер</b><small>RAV4, X3, Q5</small></span>
+                  </label>
+                  <label class="class-option">
+                    <input type="radio" name="carClass" value="suv">
+                    <span><b>Внедорожник</b><small>LC 300, X5, GLE</small></span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>3. Пакет и дополнения</legend>
+                <label for="package" class="form-label">Пакет услуг</label>
+                <select class="form-select" id="package" name="package" required>
+                  <option value="fresh">Fresh: мойка, лёгкая полировка, воск</option>
+                  <option value="ceramic" selected>Ceramic: полировка и керамика на 5 лет</option>
+                  <option value="interior">Interior: химчистка салона</option>
+                </select>
+
+                <p class="form-label mt-4 mb-2">Дополнительно</p>
+                <div class="extras">
+                  <label class="form-check">
+                    <input class="form-check-input extra" type="checkbox" name="extra" value="8000">
+                    <span class="form-check-label">Озонирование салона <em>+8 000 ₸</em></span>
+                  </label>
+                  <label class="form-check">
+                    <input class="form-check-input extra" type="checkbox" name="extra" value="12000">
+                    <span class="form-check-label">Полировка фар <em>+12 000 ₸</em></span>
+                  </label>
+                  <label class="form-check">
+                    <input class="form-check-input extra" type="checkbox" name="extra" value="25000">
+                    <span class="form-check-label">Керамика на диски <em>+25 000 ₸</em></span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>4. Дата и время</legend>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="date" class="form-label">Дата</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="time" class="form-label">Время</label>
+                    <select class="form-select" id="time" name="time" required>
+                      <option value="" selected disabled>Выберите время</option>
+                      <option>09:00</option>
+                      <option>11:00</option>
+                      <option>13:00</option>
+                      <option>15:00</option>
+                      <option>17:00</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="comment" class="form-label">Комментарий (необязательно)</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="3" placeholder="Например: есть сколы на капоте"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="form-check consent">
+                <input class="form-check-input" type="checkbox" id="agree" required>
+                <label class="form-check-label" for="agree">Согласен на обработку персональных данных</label>
+              </div>
+
+              <button type="submit" class="btn btn-accent w-100">Отправить заявку</button>
+            </form>
+
+            <div id="success" class="success" role="status" hidden>
+              <span class="success-icon">✓</span>
+              <h2>Заявка отправлена</h2>
+              <p class="text-muted-2" id="successText"></p>
+              <a href="index.html" class="btn btn-ghost">На главную</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <aside class="summary" aria-live="polite">
+              <h2>Ваш расчёт</h2>
+              <dl>
+                <div><dt>Пакет</dt><dd id="sumPackage">Ceramic</dd></div>
+                <div><dt>Класс авто</dt><dd id="sumClass">Седан</dd></div>
+                <div><dt>Дополнения</dt><dd id="sumExtras">0 ₸</dd></div>
+              </dl>
+              <div class="total">
+                <span>Итого от</span>
+                <strong id="sumTotal">140 000 ₸</strong>
+              </div>
+              <p class="summary-note">Окончательную стоимость мастер назовёт после осмотра. Осмотр бесплатный.</p>
+            </aside>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <h5>OBSIDIAN DETAILING</h5>
+          <p>Детейлинг-студия премиум-класса в Астане.</p>
+        </div>
+        <div class="col-6 col-md-4">
+          <h5>Страницы</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="services.html">Услуги и цены</a></li>
+            <li><a href="works.html">Работы</a></li>
+            <li><a href="booking.html">Запись</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h5>Контакты</h5>
+          <p class="mb-0">Астана, ул. Култегин, 10<br>+7 (705)-617-67-79<br>Ежедневно 09:00–20:00</p>
+        </div>
+      </div>
+      <hr style="border-color: var(--line)">
+      <p class="mb-0 text-center">© 2026 Obsidian Detailing. Учебный проект. Фото: Unsplash. Шрифты: Google Fonts.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const prices = {
+      fresh:    { sedan: 25000,  crossover: 30000,  suv: 35000 },
+      ceramic:  { sedan: 140000, crossover: 170000, suv: 210000 },
+      interior: { sedan: 45000,  crossover: 55000,  suv: 65000 }
+    };
+    const packageNames = { fresh: 'Fresh', ceramic: 'Ceramic', interior: 'Interior' };
+    const classNames = { sedan: 'Седан', crossover: 'Кроссовер', suv: 'Внедорожник' };
+
+    const form = document.getElementById('bookingForm');
+    const packageSelect = document.getElementById('package');
+    const dateInput = document.getElementById('date');
+
+    function formatPrice(value) {
+      return value.toLocaleString('ru-RU') + ' ₸';
+    }
+
+    function updateSummary() {
+      const carClass = form.querySelector('input[name="carClass"]:checked').value;
+      const pack = packageSelect.value;
+      let extras = 0;
+      form.querySelectorAll('.extra:checked').forEach(function (box) {
+        extras += Number(box.value);
+      });
+      const total = prices[pack][carClass] + extras;
+
+      document.getElementById('sumPackage').textContent = packageNames[pack];
+      document.getElementById('sumClass').textContent = classNames[carClass];
+      document.getElementById('sumExtras').textContent = formatPrice(extras);
+      document.getElementById('sumTotal').textContent = formatPrice(total);
+    }
+
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+
+    form.addEventListener('change', updateSummary);
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      document.getElementById('successText').textContent =
+        name + ', спасибо! Мы перезвоним в течение часа и подтвердим время. Предварительная стоимость: ' +
+        document.getElementById('sumTotal').textContent + '.';
+      form.hidden = true;
+      document.getElementById('success').hidden = false;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    updateSummary();
+  </script>
+</body>
+</html>

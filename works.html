@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Наши работы: примеры полировки, керамики и химчистки Obsidian Detailing. Слайдер до и после.">
+  <title>Obsidian Detailing | Работы</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/works.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top site-nav" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">OBSIDIAN<span>.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainMenu" aria-controls="mainMenu"
+              aria-expanded="false" aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Услуги и цены</a></li>
+          <li class="nav-item"><a class="nav-link active" href="works.html">Работы</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+          <li class="nav-item ms-lg-3"><a class="btn btn-accent btn-sm" href="booking.html">Записаться</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-head">
+      <div class="container">
+        <p class="hero-tag fade-up">Наши работы</p>
+        <h1 class="fade-up d2">Результат<br>виден сразу.</h1>
+        <p class="fade-up d3">Реальные автомобили, реальный блеск. Передвиньте ползунок и сравните состояние кузова до и после обработки.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">До и после</h2>
+        <p class="section-lead">Коррекционная полировка и керамическое покрытие. Потяните ползунок влево или вправо.</p>
+
+        <div class="ba" role="group" aria-label="Сравнение до и после">
+          <div class="ba-layer ba-after"></div>
+          <div class="ba-layer ba-before"></div>
+          <span class="ba-label ba-label-before">До</span>
+          <span class="ba-label ba-label-after">После</span>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Положение ползунка до и после">
+          <div class="ba-handle" aria-hidden="true"><span></span></div>
+        </div>
+        <p class="ba-note">Фото для примера. Обработка: полировка в два этапа и керамическое покрытие.</p>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="container">
+        <h2 class="section-title">Галерея</h2>
+        <p class="section-lead">Несколько недавних автомобилей из студии.</p>
+
+        <div class="gallery">
+          <figure class="work w1">
+            <div class="work-img" role="img" aria-label="Тёмный седан после керамики"></div>
+            <figcaption><b>Audi A6</b><span>Керамика · 3 дня</span></figcaption>
+          </figure>
+          <figure class="work w2">
+            <div class="work-img" role="img" aria-label="Кроссовер после полировки"></div>
+            <figcaption><b>BMW X5</b><span>Полировка · 2 дня</span></figcaption>
+          </figure>
+          <figure class="work w3">
+            <div class="work-img" role="img" aria-label="Салон после химчистки"></div>
+            <figcaption><b>Toyota Camry</b><span>Химчистка · 1 день</span></figcaption>
+          </figure>
+          <figure class="work w4">
+            <div class="work-img" role="img" aria-label="Автомобиль с защитной плёнкой"></div>
+            <figcaption><b>Lexus RX</b><span>Защитная плёнка · 2 дня</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container text-center">
+        <h2>Хотите такой же результат?</h2>
+        <p class="text-muted-2">Запишитесь на бесплатный осмотр, и мы подберём решение под ваш автомобиль.</p>
+        <a href="booking.html" class="btn btn-accent">Записаться</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <h5>OBSIDIAN DETAILING</h5>
+          <p>Детейлинг-студия премиум-класса в Астане.</p>
+        </div>
+        <div class="col-6 col-md-4">
+          <h5>Страницы</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="services.html">Услуги и цены</a></li>
+            <li><a href="works.html">Работы</a></li>
+            <li><a href="booking.html">Запись</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h5>Контакты</h5>
+          <p class="mb-0">Астана, ул. Култегин, 10<br>+7 (705) 617-67-79<br>Ежедневно 09:00–20:00</p>
+        </div>
+      </div>
+      <hr style="border-color: var(--line)">
+      <p class="mb-0 text-center">© 2026 Obsidian Detailing. Учебный проект. Фото: Unsplash. Шрифты: Google Fonts.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const slider = document.querySelector('.ba');
+    const range = slider.querySelector('.ba-range');
+    range.addEventListener('input', function () {
+      slider.style.setProperty('--pos', range.value + '%');
+    });
+  </script>
+</body>
+</html>
